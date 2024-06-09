@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+}
+.page-content {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+.Header {
+  padding: 10px;
+  background-color: #000;
+}
+a {
+  margin: 0 10px;
+  color: #fff;
+}
+
+.footer {
+  padding: 10px;
+  background-color: #000;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
