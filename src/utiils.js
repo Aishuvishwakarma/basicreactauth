@@ -25,6 +25,15 @@ const getAllProducts = async () => {
   }
 };
 
-export { loginUser, getAllProducts };
+const getProductDeyailsById = async (id) => {
+  try {
+    const response = await axios.get(`/products/${id}`);
+    return response.data;
+  } catch (error) {
+    return error;
+  }
+};
+
+export { loginUser, getAllProducts, getProductDeyailsById };
 
 // get  post patch put delete

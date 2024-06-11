@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import { getAllProducts } from "./utiils";
 import Table from "react-bootstrap/Table";
 import Spinner from "react-bootstrap/Spinner";
+import { useNavigate } from "react-router-dom";
 
 function Contact() {
   const [products, setProducts] = useState([]);
   const [isloading, setisloading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     getdata();
@@ -49,7 +51,13 @@ function Contact() {
                 <td>
                   <img src={product.images[0]} height={50} width={50} />
                 </td>
-                <td>{product.title}</td>
+                <td
+                  onClick={() => {
+                    navigate("/producDetails/" + product.id);
+                  }}
+                >
+                  {product.title}
+                </td>
                 <td>{truncateDescription(product.description)}</td>
                 <td>{product.category}</td>
                 <td>{product.price}</td>

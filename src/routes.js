@@ -5,6 +5,7 @@ import About from "./About";
 import Contact from "./Contact";
 import Login from "./Login";
 import Profile from "./Profile";
+import ProducDetails from "./producDetails";
 
 export const authRoutes = [
   {
@@ -23,6 +24,10 @@ export const authRoutes = [
     path: "/profile",
     component: <Profile />,
   },
+  {
+    path:"/producDetails/:producId",
+    component: <ProducDetails />,
+  }
 ];
 
 export const nonAuthRoutes = [
